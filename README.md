@@ -28,6 +28,19 @@ Before sending any messages `WebsocketMessaging::Notifier.bus_connector` has to 
 
 If you are using Rails, put this line to `config/initializers/websocket_messaging.rb`.
 
+### Example
+    channel_id  = "sport"
+    channel_ids = %w(sport weather)
+
+    channel = WebsocketMessaging::Channel.new(channel_id) do |channel|
+      channel.onmessage do |data|
+        channel.notifier.multicast(channel_ids).notify(data)
+      end
+    end
+
+    channel.start(socket)
+    # see the requirements about socket below
+
 ### Passing socket
 
 Gem expects socket to respond to following methods: `onclose(&block)`, `onmessage(&block)` and `send_data(msg)`.
