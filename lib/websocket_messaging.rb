@@ -1,5 +1,5 @@
 require "websocket_messaging/version"
+require "websocket_messaging/channel"
 
 module WebsocketMessaging
-  # Your code goes here...
 end
