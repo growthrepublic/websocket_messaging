@@ -8,9 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = WebsocketMessaging::VERSION
   spec.authors       = ["Artur Hebda"]
   spec.email         = ["arturhebda@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %[Messaging platform for sending json data that supports many-to-many
+    connections using sockets, i.e. websockets.]
+  spec.description   = %[This gem has been extracted from chat application based on websockets.
+    It consists of basically two components: channels and notifiers. Channels are meant to handle
+    external communication through provided socket in a bidirectional manner while
+    using notifiers for internal communication. Notifiers are using a messaging bus,
+    which might be anything supporting publish/subscribe pattern across multiple threads / processes,
+    i.e. common Redis cluster. It lets you define your own handlers for receiving and sending data.]
+  spec.homepage      = "https://github.com/growthrepublic/websocket_messaging"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
