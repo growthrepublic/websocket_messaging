@@ -24,7 +24,7 @@ Or install it yourself as:
 
 Before sending any messages `WebsocketMessaging::Notifier.bus_connector` has to be set up. If you have `Redis` running on your server, then you can simply set it to return a new redis client instance each time as follows:
 
-`WebsocketMessaging::Notifier.bus_connector = -> { Redis.new }`
+    WebsocketMessaging::Notifier.bus_connector = -> { Redis.new }
 
 If you are using Rails, put this line to `config/initializers/websocket_messaging.rb`.
 
