@@ -28,7 +28,7 @@ Before sending any messages `WebsocketMessaging::Notifier.bus_connector` has to 
 
 If you are using Rails, put this line to `config/initializers/websocket_messaging.rb`.
 
-### Example
+### Example - excerpt from group conversation
     channel_id  = "sport"
     channel_ids = %w(sport weather)
 
@@ -43,11 +43,11 @@ If you are using Rails, put this line to `config/initializers/websocket_messagin
 
 ### Passing socket
 
-Gem expects socket to respond to following methods: `onclose(&block)`, `onmessage(&block)` and `send_data(msg)`.
+Gem expects socket to respond to following methods: `onclose(&block)`, `onmessage(&block)` and `send_data(msg)`. This requirements can be met by [tubesock](https://github.com/ngauthier/tubesock). To find out more check sample chat app below.
 
-### Example
+### Sample chat app
 
-TODO! Stay tuned, we are going to open source one of our Rails apps which this gem was extracted from.
+If you are looking for a ready-to-use app, check out our [sample chat](https://github.com/growthrepublic/chat).
 
 ## Contributing
 
