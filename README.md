@@ -1,6 +1,7 @@
 # WebsocketMessaging
 
 [![Code Climate](https://codeclimate.com/github/growthrepublic/websocket_messaging.png)](https://codeclimate.com/github/growthrepublic/websocket_messaging)
+[![Build Status](https://travis-ci.org/growthrepublic/websocket_messaging.svg?branch=master)](https://travis-ci.org/growthrepublic/websocket_messaging)
 
 This gem has been extracted from chat application based on websockets. It consists of basically two components: channels and notifiers. Channels are meant to handle external communication through provided socket in a bidirectional manner while using notifiers for internal communication. Notifiers are using a messaging bus, which might be anything supporting publish/subscribe pattern across multiple threads / processes, i.e. common Redis cluster. It lets you define your own handlers for receiving and sending data.
 
